@@ -1,3 +1,16 @@
 /* TODO (optional): Define styles for dark mode */
 
 /* TODO (optional): Ensure text and background colors adjust for dark mode */
+.light {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}

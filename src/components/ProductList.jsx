@@ -7,17 +7,20 @@ export const sampleProducts = [
   { id: 2, name: 'Milk', price: '$2.50', category: 'Dairy', inStock: false }
 ]
 
-const ProductList = () => {
+const ProductList = ({ products, addToCart }) => {
   return (
     <div>
       <h2>Available Products</h2>
 
       {/* TODO: Filter sample data using selected category */}
-      {sampleProducts.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {products.length === 0 ? (
+        <p>No products available in this category.</p>
+      ) : (
+        products.map((Product) => (
+          <ProductCard key={Product.id} product={Product} addToCart={addToCart} />
+        ))
+      )}
     </div>
-  )
-}
-
-export default ProductList
+  );
+};
+export default ProductList;
